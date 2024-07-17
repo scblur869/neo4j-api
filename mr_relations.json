@@ -1,0 +1,101 @@
+{ "relations": [
+    {
+        "fromAlias": "jprobot01",
+        "fromLabel":"Equipment",
+        "fromProperties":
+         {
+            "name": "jprobot-1bs",
+            "role": "body welder"
+        },
+        "relation": "SENDS_DATA_TO",
+        "relationProperties": {
+            "data": "machine data stream"
+        },
+        "toAlias": "tsdc01",
+        "toLabel": "DataSource",
+        "toProperties": {
+            "name": "tsdc-1"
+        }
+    },
+    {
+        "fromAlias": "jprobot02",
+        "fromLabel":"Equipment",
+        "fromProperties":
+         {
+            "name": "jprobot-2bs",
+            "role": "body welder"
+        },
+        "relation": "SENDS_DATA_TO",
+        "relationProperties": {
+            "data": "machine data stream"
+        },
+        "toAlias": "tsdc01",
+        "toLabel": "DataSource",
+        "toProperties": {
+            "name": "tsdc-1"
+        
+        }
+    },
+    {
+        "fromAlias": "jprobot03",
+        "fromLabel":"Equipment",
+        "fromProperties":
+         {
+            "name": "jprobot-3bs",
+            "role": "body welder"
+        },
+        "relation": "SENDS_DATA_TO",
+        "relationProperties": {
+            "data": "machine data stream"
+        },
+        "toAlias": "tsdc01",
+        "toLabel": "DataSource",
+        "toProperties": {
+            "name": "tsdc-1"
+        }
+    },
+    {
+        "fromAlias": "jprobot04",
+        "fromLabel":"Equipment",
+        "fromProperties":
+         {
+            "name": "jprobot-4bs",
+            "role": "body welder"
+        },
+        "relation": "SENDS_DATA_TO",
+        "relationProperties": {
+            "data": "machine data stream"
+        },
+        "toAlias": "tsdc01",
+        "toLabel": "DataSource",
+        "toProperties": {
+            "name": "tsdc-1"
+
+        }
+    },
+    {
+        "fromAlias": "tjohnson",
+        "fromLabel": "Person",
+        "fromProperties": {
+            "name": "tjohnson"
+        },
+        "relation": "BELONGS_TO",
+        "relationProperties": {
+            "name": "alert group member"
+        },
+        "toAlias": "alertgroup01",
+        "toLabel": "AlertGroup",
+        "toProperties": {
+            "name": "alertgroup01"
+        }
+    },
+    {
+        "fromAlias": "jprobot01",
+        "fromLabel": "Equipment",
+        "relation": "OPEN_WORKORDER-01",
+        "toAlias": "wo77213",
+        "toLabel": "WorkOrder"
+    }
+    
+]
+}

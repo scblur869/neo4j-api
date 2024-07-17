@@ -1,0 +1,300 @@
+{
+    "company": [
+        {
+            "alias": "scca",
+            "label": "Org",
+            "properties": {
+                "name": "SCCA",
+                "location":"Columbia,SC"
+            }
+        },
+        {
+            "alias": "sccm",
+            "label": "Plant",
+            "properties": {
+                "name": "SCCM",
+                "location":"Greenville,SC"
+            }
+        },
+        {
+            "alias": "bodyshop",
+            "label": "PlantArea",
+            "properties": {
+                "name": "BodyShop",
+                "location":"SCCM"
+            }
+        },
+        {
+            "alias": "paintshop",
+            "label": "PlantArea",
+            "properties": {
+                "name": "Plant Shop",
+                "location":"SCCM"
+            }
+        }
+    ],
+    "equipment": [
+        {
+            "alias": "jprobot01",
+            "label": "Equipment",
+            "properties": {
+                "name": "jprobot-1bs",
+                "type": "robotic welder",
+                "serial": "134f2ccjp56",
+                "role": "body welder",
+                "owner": "jsmith",
+                "uptime": 37.6,
+                "area": "bodyshop",
+                "status": "active",
+                "last_maintenance": "2023-08-03T00:00:00Z",
+                "last_workorder_id": "wo15463",
+                "current_workorder_id": "wo773454",
+                "workorder_status": "ordered"
+            }
+        },
+        {
+            "alias": "jprobot02",
+            "label": "Equipment",
+            "properties": {
+                "name": "jprobot-2bs",
+                "type": "robotic welder",
+                "serial": "134f2ccjp57",
+                "role": "body welder",
+                "owner": "jsmith",
+                "uptime": 141.3,
+                "area": "bodyshop",
+                "status": "active",
+                "last_maintenance": "2024-04-13T00:00:00Z",
+                "last_workorder_id": "wo15488",
+                "current_workorder_id": null,
+                "workorder_status": "clear"
+            }
+        },
+        {
+            "alias": "jprobot03",
+            "label": "Equipment",
+            "properties": {
+                "name": "jprobot-3bs",
+                "type": "robotic welder",
+                "serial": "134f2ccjp59",
+                "role": "body welder",
+                "owner": "jsmith",
+                "uptime": 21.6,
+                "area": "bodyshop",
+                "status": "active",
+                "last_maintenance": "2023-08-04T00:00:00Z",
+                "last_workorder_id": "wo55463",
+                "current_workorder_id": null,
+                "workorder_status": "clear"
+            }
+        },
+        {
+            "alias": "jprobot04",
+            "label": "Equipment",
+            "properties": {
+                "name": "jprobot-4bs",
+                "type": "robotic welder",
+                "serial": "134dfecjp22",
+                "role": "body welder",
+                "owner": "jsmith",
+                "uptime": 215.2,
+                "area": "bodyshop",
+                "status": "active",
+                "last_maintenance": "2024-01-13T00:00:00Z",
+                "last_workorder_id": "wo08142",
+                "current_workorder_id": "wo77213",
+                "workorder_status": "awaiting approval"
+            }
+        }
+    ],
+    "sensors": [
+    {
+        "alias":"temperature",
+        "label":"Sensor",
+        "properties":{
+            "name":"temperature-01"
+        }
+    },
+    {
+        "alias":"temperature",
+        "label":"Sensor",
+        "properties":{
+            "name":"temperature-02"
+        }
+    },
+    {
+        "alias":"oscillation",
+        "label":"Sensor",
+        "properties":{
+            "name":"oscillation-1"
+        }
+    },
+    {
+        "alias":"vibration",
+        "label":"Sensor",
+        "properties":{
+            "name":"vibration-02"
+        }
+    },
+    {
+        "alias":"articulation",
+        "label":"Sensor",
+        "properties":{
+            "name":"articulation-xyz"
+        }
+    }
+    ],
+    "workorders": [
+        {
+            "alias": "wo77213",
+            "label": "WorkOrder",
+            "properties": {
+                "name": "wo77213",
+                "details": "robotic welder needs maintenance",
+                "asset": "jprobot-4bs",
+                "notes": "vibration greater than 4.9 (m/s^2) detected",
+                "scheduled_start": "2024-01-13T08:00:00Z",
+                "site": "gsp-1",
+                "location": "bel1",
+                "priority": "3",
+                "owner": "jsmith",
+                "approver": "tjohnson",
+                "status": "WAPPR"
+            }
+        },
+        {
+            "alias": "wo77214",
+            "label": "WorkOrder",
+            "properties": {
+                "name": "wo77214",
+                "details": "robotic welder needs maintenance",
+                "asset": "jprobot-1bs",
+                "notes": "temperature exceeds 45C for 2 mins",
+                "scheduled_start": "2024-01-13T08:00:00Z",
+                "site": "gsp-1",
+                "location": "bel1",
+                "priority": "3",
+                "owner": "jsmith",
+                "approver": "tjohnson",
+                "status": "WAPPR"
+            }
+        }
+    ],
+    "data-sources": [
+        {
+            "alias": "tsdc01",
+            "label": "DataSource",
+            "properties": {
+                "name": "tsdc-1",
+                "details": "jprobot data collector v2.1",
+                "owner": "shampton",
+                "location": "bodyshop",
+                "collects_from": "jprobot",
+                "release": "2.1"
+            }
+        }
+    ],
+    "alerts": [
+        {
+            "alias": "alert03",
+            "label": "Alert",
+            "properties": {
+                "name": "overtravel",
+                "details": "robot arm over travel threshold exceeded 5 times in 2 mins",
+                "severity": "orange",
+                "location": "bodyshop",
+                "from": "jprobot04",
+                "state": "accepted"
+            }
+        },
+        {
+            "alias": "alert01",
+            "label": "Alert",
+            "properties": {
+                "name": "vibration",
+                "details": "motor vibration anomaly detected",
+                "severity": "orange",
+                "location": "bodyshop",
+                "from": "jprobot01",
+                "state": "accepted"
+            }
+        },
+        {
+            "alias": "alert02",
+            "label": "Alert",
+            "properties": {
+                "name": "oscillation",
+                "details": "motor oscillation anomaly detected",
+                "severity": "orange",
+                "location": "bodyshop",
+                "from": "jprobot01",
+                "state": "not accepted"
+            }
+        }
+    ],
+    "alertgroup": [
+        {
+            "alias": "alertgroup01",
+            "label": "AlertGroup",
+            "properties": {
+                "name": "alertgroup01",
+                "details": "body shop alert group",
+                "location": "bodyshop"
+            }
+        }
+    ],
+    "personnel": [
+        {
+            "alias": "jsmith",
+            "label": "Person",
+            "properties": {
+                "name": "jsmith",
+                "job": "machine reliability engineer bodyshop",
+                "location": "bodyshop",
+                "department": "engineering",
+                "memberof": "alertgroup01",
+                "reportsto": "tjohnson"
+            }
+        },
+        {
+            "alias": "tjohnson",
+            "label": "Person",
+            "properties": {
+                "name": "tjohnson",
+                "job": "machine reliability engineering team lead",
+                "location": "bodyshop",
+                "department": "engineering",
+                "memberof": "alertgroup01",
+                "directreports": [
+                    "jsmith"
+                ]
+            }
+        },
+        {
+            "alias": "fstephens",
+            "label": "Person",
+            "properties": {
+                "name": "fstephens",
+                "job": "machine reliability engineer team lead",
+                "location": "bodyshop",
+                "department": "engineering",
+                "memberof": "alertgroup02",
+                "directreports": [
+                    "shampton"
+                ]
+            }
+        },
+        {
+            "alias": "shampton",
+            "label": "Person",
+            "properties": {
+                "name": "shampton",
+                "job": "machine reliability engineer body",
+                "location": "bodyshop",
+                "department": "engineering",
+                "memberof": "alertgroup02",
+                "reportsto": "fstephens"
+            }
+        }
+    ]
+}
