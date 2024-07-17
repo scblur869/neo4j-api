@@ -1,5 +1,5 @@
 
-# CYPHER-API
+# NEO4j-API
 ## Purpose
 Purpose of this API is to accelerate the onboarding of graphdb data in cypher query language format to Neo4j
 
