@@ -1,7 +1,7 @@
 package services
 
 import (
-	s "local/cypher-api/structs"
+	s "local/neo4j-api/structs"
 	"net/http"
 	"os"
 

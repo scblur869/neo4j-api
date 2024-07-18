@@ -2,7 +2,7 @@ package services
 
 import (
 	"fmt"
-	s "local/cypher-api/structs"
+	s "local/neo4j-api/structs"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

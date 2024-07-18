@@ -8,6 +8,7 @@ Purpose of this API is to accelerate the onboarding of graphdb data in cypher qu
 Build this service as a docker container (docker build)
 OR
 Clone this repo and compile and run it locally via the console (go build)
+**go.mod** is built under local/neo4j-api
 
 ### Endpoints
 ```console

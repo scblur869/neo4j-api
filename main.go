@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	rest "local/cypher-api/rest"
-	handler "local/cypher-api/services"
+	rest "local/neo4j-api/rest"
+	handler "local/neo4j-api/services"
 	"log"
 	"net/http"
 	"os"

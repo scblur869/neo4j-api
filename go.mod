@@ -1,4 +1,4 @@
-module local/cypher-api
+module local/neo4j-api
 
 go 1.21.3
 
