@@ -1,9 +1,10 @@
 package services
 
 import (
-	s "local/neo4j-api/structs"
 	"net/http"
 	"os"
+
+	s "github.com/scblur869/neo4j-api/structs"
 
 	"github.com/gin-gonic/gin"
 	"github.com/neo4j/neo4j-go-driver/v5/neo4j"

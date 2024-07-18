@@ -3,13 +3,14 @@ package main
 import (
 	"context"
 	"fmt"
-	rest "local/neo4j-api/rest"
-	handler "local/neo4j-api/services"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"time"
+
+	rest "github.com/scblur869/neo4j-api/rest"
+	handler "github.com/scblur869/neo4j-api/services"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"

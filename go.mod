@@ -1,4 +1,4 @@
-module local/neo4j-api
+module github.com/scblur869/neo4j-api
 
 go 1.21.3
 

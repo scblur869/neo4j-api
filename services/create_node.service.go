@@ -4,8 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	s "local/neo4j-api/structs"
 	"net/http"
+
+	s "github.com/scblur869/neo4j-api/structs"
 
 	"github.com/gin-gonic/gin"
 	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
