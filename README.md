@@ -44,8 +44,13 @@ run the test.sh file to test deletions
 sh ./test.sh
 ```
 #### extra
-mr_data.json contains more example data in native json format. This came from my initial thoughts about the data.
-
+nodes.json & relations.json contains more example data in native json format. This came from my initial thoughts about the data.
+run 
+```python
+python load_json.py
+```
+this reads the nodes.json and the relations.json file and loads this into Neo4j. You can then use the Neo4j console to visualize the data
+![S3 Files ](img/neo-kg.png)
 #### Payload structs
 this maybe helpful for inisight into the JSON payload structure
 ```go

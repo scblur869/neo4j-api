@@ -28,7 +28,7 @@
             "alias": "paintshop",
             "label": "PlantArea",
             "properties": {
-                "name": "Plant Shop",
+                "name": "PaintShop",
                 "location":"SCCM"
             }
         }

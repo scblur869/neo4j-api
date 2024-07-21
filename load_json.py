@@ -1,11 +1,11 @@
 import json
 import requests
 
-node = open('mr_data.json')
-rel = open('mr_relations.json')
+node = open('nodes.json')
+rel = open('relations.json')
 node_data = json.load(node)
 relation_data = json.load(rel)
-mr = ["equipment","workorders","alerts","data-sources", "alertgroup","personnel"]
+mr = ["company","equipment","workorders","alerts","data-sources", "alertgroup","personnel"]
 
 headers = {
   'Content-Type': 'application/json'
