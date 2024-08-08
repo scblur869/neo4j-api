@@ -12,6 +12,8 @@ Clone this repo and compile and run it locally via the console (go build)
 
 ### Endpoints
 ```console
+  [GET]  /api/v1/getAll --> gets all nodes and relations
+  [GET]  /api/v1/getAllNodes   --> gets all nodes
   [POST] /api/v1/purge   --> purges neo4j data, requires key
   [POST] /api/v1/addNode --> adds node
   [POST] /api/v1/addRelation --> adds relation for nodes
