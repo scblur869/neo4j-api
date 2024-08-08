@@ -54,12 +54,14 @@ func main() {
 		AllowCredentials: true,
 		MaxAge:           12 * time.Hour,
 	}))
-	r.GET("/api/v1/health", rest.HealthCheck)            // tested
-	r.POST("/api/db/purge", neo.PurgeDbData)             // tested
-	r.POST("/api/v1/addNode", neo.CreateNode)            // tested
-	r.POST("/api/v1/addRelation", neo.CreatRelationship) // tested
-	r.POST("/api/v1/deleteNode", neo.DeleteNode)         // tested
-	r.POST("/api/v1/deleteRelation", neo.DeleteRelation) // tested
+	r.GET("/api/v1/health", rest.HealthCheck)                //tested
+	r.GET("/api/v1/getAll", neo.GetAllNodesAndRelationships) // tested
+	r.GET("/api/v1/getAllNodes", neo.GetAllNodes)            // tested
+	r.POST("/api/db/purge", neo.PurgeDbData)                 // tested
+	r.POST("/api/v1/addNode", neo.CreateNode)                // tested
+	r.POST("/api/v1/addRelation", neo.CreatRelationship)     // tested
+	r.POST("/api/v1/deleteNode", neo.DeleteNode)             // tested
+	r.POST("/api/v1/deleteRelation", neo.DeleteRelation)     // tested
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(404, gin.H{"code": "PAGE_NOT_FOUND", "message": "Not Found"})
 	})
